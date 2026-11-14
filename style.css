@@ -1,0 +1,240 @@
+/* ফাতিহ ’২১ · অতীত থেকে ভবিষ্যৎ */
+
+/* ── ফন্ট ─────────────────────────────────────────── */
+@font-face{font-family:"Tiro Bangla";font-weight:400;font-display:swap;
+  src:url(assets/fonts/tiro-bangla-bengali-400-normal.woff2) format("woff2");
+  unicode-range:U+0951-0952,U+0964-0965,U+0980-09FE,U+1CD0,U+1CD2,U+1CD5-1CD6,U+1CD8,U+1CE1,U+1CEA,U+1CED,U+1CF2,U+1CF5-1CF7,U+200C-200D,U+20B9,U+25CC,U+A8F1}
+@font-face{font-family:"Tiro Bangla";font-weight:400;font-display:swap;
+  src:url(assets/fonts/tiro-bangla-latin-400-normal.woff2) format("woff2");
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+@font-face{font-family:"Hind Siliguri";font-weight:400;font-display:swap;src:url(assets/fonts/hind-siliguri-bengali-400-normal.woff2) format("woff2");unicode-range:U+0951-0952,U+0964-0965,U+0980-09FE,U+1CD0,U+1CD2,U+1CD5-1CD6,U+1CD8,U+1CE1,U+1CEA,U+1CED,U+1CF2,U+1CF5-1CF7,U+200C-200D,U+20B9,U+25CC,U+A8F1}
+@font-face{font-family:"Hind Siliguri";font-weight:500;font-display:swap;src:url(assets/fonts/hind-siliguri-bengali-500-normal.woff2) format("woff2");unicode-range:U+0951-0952,U+0964-0965,U+0980-09FE,U+1CD0,U+1CD2,U+1CD5-1CD6,U+1CD8,U+1CE1,U+1CEA,U+1CED,U+1CF2,U+1CF5-1CF7,U+200C-200D,U+20B9,U+25CC,U+A8F1}
+@font-face{font-family:"Hind Siliguri";font-weight:600;font-display:swap;src:url(assets/fonts/hind-siliguri-bengali-600-normal.woff2) format("woff2");unicode-range:U+0951-0952,U+0964-0965,U+0980-09FE,U+1CD0,U+1CD2,U+1CD5-1CD6,U+1CD8,U+1CE1,U+1CEA,U+1CED,U+1CF2,U+1CF5-1CF7,U+200C-200D,U+20B9,U+25CC,U+A8F1}
+@font-face{font-family:"Hind Siliguri";font-weight:700;font-display:swap;src:url(assets/fonts/hind-siliguri-bengali-700-normal.woff2) format("woff2");unicode-range:U+0951-0952,U+0964-0965,U+0980-09FE,U+1CD0,U+1CD2,U+1CD5-1CD6,U+1CD8,U+1CE1,U+1CEA,U+1CED,U+1CF2,U+1CF5-1CF7,U+200C-200D,U+20B9,U+25CC,U+A8F1}
+@font-face{font-family:"Hind Siliguri";font-weight:400;font-display:swap;src:url(assets/fonts/hind-siliguri-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Hind Siliguri";font-weight:500;font-display:swap;src:url(assets/fonts/hind-siliguri-latin-500-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Hind Siliguri";font-weight:600;font-display:swap;src:url(assets/fonts/hind-siliguri-latin-600-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Hind Siliguri";font-weight:700;font-display:swap;src:url(assets/fonts/hind-siliguri-latin-700-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+/* ── টোকেন ────────────────────────────────────────── */
+:root{
+  --night:#0f1131;      /* পেজের জমিন */
+  --deep:#14264a;       /* উঁচু তল */
+  --lapis:#27427a;      /* রেখা, হোভার */
+  --gold:#e3b94b;       /* লোগোর সোনালি */
+  --ivory:#f3eedc;      /* মূল লেখা */
+  --mist:#a9b6d3;       /* গৌণ লেখা */
+  --display:"Tiro Bangla","Hind Siliguri",serif;
+  --text:"Hind Siliguri","Tiro Bangla",system-ui,sans-serif;
+  --wrap:1180px;
+  --gutter:clamp(1.25rem,4vw,2.5rem);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:5rem;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--night);color:var(--ivory);font-family:var(--text);font-size:1.125rem;line-height:1.8;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.3;margin:0}
+p{margin:0 0 1.1em;text-wrap:pretty}
+a{color:var(--gold)}
+:focus-visible{outline:3px solid var(--ivory);outline-offset:3px;border-radius:2px}
+
+.wrap{width:min(100% - 2*var(--gutter),var(--wrap));margin-inline:auto}
+.skip{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--night);padding:.6rem 1rem;z-index:100}
+.skip:focus{left:0}
+
+/* ── হেডার ────────────────────────────────────────── */
+.top{position:sticky;top:0;z-index:50;background:rgba(15,17,49,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(169,182,211,.14)}
+.top__in{width:min(100% - 2*var(--gutter),var(--wrap));margin-inline:auto;display:flex;align-items:center;gap:1.5rem;min-height:4rem}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--ivory);font-family:var(--display);font-size:1.15rem;white-space:nowrap}
+.brand img{height:2.9rem;width:auto}
+.nav{display:flex;gap:.25rem;margin-left:auto}
+.nav a{color:var(--mist);text-decoration:none;padding:.35rem .85rem;border-radius:99px;font-weight:500;font-size:1rem;display:inline-flex;align-items:center;gap:.4rem;transition:color .2s,background .2s}
+.nav a:hover{color:var(--ivory);background:rgba(169,182,211,.12)}
+.nav a[aria-current="true"]{color:var(--night);background:var(--gold)}
+.badge{min-width:1.35rem;height:1.35rem;padding:0 .35rem;border-radius:99px;background:var(--gold);color:var(--night);font-size:.8rem;font-weight:700;line-height:1.35rem;text-align:center}
+.nav a[aria-current="true"] .badge{background:var(--night);color:var(--gold)}
+.top__ruet{height:2.4rem;width:auto}
+
+/* ── বোতাম ────────────────────────────────────────── */
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:.65rem 1.5rem;border-radius:6px;font:600 1.05rem/1.5 var(--text);text-decoration:none;border:2px solid var(--gold);cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.btn--gold{background:var(--gold);color:var(--night)}
+.btn--gold:hover{background:var(--ivory);border-color:var(--ivory)}
+.btn--line{background:transparent;color:var(--gold)}
+.btn--line:hover{background:var(--gold);color:var(--night)}
+
+/* ── হিরো ─────────────────────────────────────────── */
+.hero{position:relative;padding:clamp(2.5rem,6vw,4.5rem) 0 clamp(3.5rem,8vw,6rem);
+  background:linear-gradient(to bottom,rgba(15,17,49,0) 55%,var(--night) 100%),url(assets/bg.jpg) center top/cover no-repeat,var(--night)}
+.ticker{display:flex;align-items:center;gap:.8rem;max-width:44rem;margin-bottom:clamp(2rem,5vw,3.5rem);padding:.35rem .9rem .35rem .35rem;border:1px solid rgba(227,185,75,.5);border-radius:99px;text-decoration:none;color:var(--ivory);font-size:1rem;background:rgba(15,17,49,.55)}
+.ticker[hidden]{display:none}
+.ticker:hover{border-color:var(--gold)}
+.ticker__tag{flex:none;background:var(--gold);color:var(--night);font-weight:700;font-size:.9rem;padding:.1rem .8rem;border-radius:99px}
+.ticker__text{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hero__org{margin:0 0 .75rem;color:var(--mist);font-size:1.05rem}
+.hero__title{display:flex;flex-direction:column;font-size:clamp(3.4rem,10.5vw,7.6rem);line-height:1.12;letter-spacing:-.01em;margin-bottom:clamp(1.5rem,4vw,2.5rem)}
+.hero__title .t2{margin-left:clamp(2.5rem,13vw,12rem)}
+
+.path{position:relative;height:1.6rem;margin-bottom:clamp(1.75rem,4vw,2.75rem)}
+.path__line{position:absolute;left:.4rem;right:.4rem;top:50%;height:1.5px;margin-top:-.75px;background:var(--gold);transform-origin:left center}
+.path__dot{position:absolute;top:50%;width:.95rem;height:.95rem;border-radius:50%;transform:translateY(-50%);border:2px solid var(--gold);background:var(--night)}
+.path__dot--a{left:0}
+.path__dot--b{right:0;background:var(--gold)}
+.path__moon{position:absolute;left:50%;top:50%;width:1.5rem;height:1.5rem;margin:-.75rem 0 0 -.75rem;border-radius:50%;background:var(--night);box-shadow:inset -.45rem .05rem 0 0 var(--gold);transform:rotate(-25deg)}
+
+.entries{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem)}
+.entry{display:flex;flex-direction:column;align-items:flex-start}
+.entry .btn{margin-top:auto}
+.entry h2{font-size:clamp(1.7rem,3.2vw,2.35rem);margin-bottom:.5rem}
+.entry__era{display:block;color:var(--gold);font-weight:600;font-size:1rem;margin-bottom:.35rem}
+.entry__lead{color:var(--mist);margin-bottom:1.2rem;max-width:30rem}
+.entry__facts{margin:0 0 1.6rem;display:grid;gap:.5rem}
+.entry__facts>div{display:flex;flex-wrap:wrap;gap:.1rem .8rem;align-items:baseline}
+.entry__facts dt{color:var(--mist);font-size:.98rem}
+.entry__facts dd{margin:0;font-weight:600}
+
+/* এককালীন লোডের দৃশ্য: পথরেখা আঁকা হয় */
+@media (prefers-reduced-motion:no-preference){
+  .path__line{transform:scaleX(0);animation:draw 1.6s .25s cubic-bezier(.6,.05,.2,1) forwards}
+  .path__dot,.path__moon{opacity:0;animation:pop .5s forwards}
+  .path__dot--a{animation-delay:.2s}
+  .path__moon{animation-delay:.95s}
+  .path__dot--b{animation-delay:1.7s}
+  @keyframes draw{to{transform:scaleX(1)}}
+  @keyframes pop{to{opacity:1}}
+}
+
+/* ── সেকশন ────────────────────────────────────────── */
+.sec{padding:clamp(3.5rem,8vw,6.5rem) 0}
+.sec--case{background:linear-gradient(to bottom,var(--night),#111a3e 8rem,#111a3e calc(100% - 8rem),var(--night))}
+.grid{display:grid;grid-template-columns:minmax(0,19rem) minmax(0,1fr);gap:clamp(2rem,6vw,5.5rem);align-items:start}
+.sec__head{position:sticky;top:5.5rem}
+.tag{display:inline-block;background:var(--gold);color:var(--night);font:700 1.05rem/1.5 var(--text);padding:.2rem 1rem;border-radius:6px;margin-bottom:1rem}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem}
+.tags .tag{margin-bottom:0}
+.tag--who{background:#f1d98c}
+.who{padding:1.3rem 1.6rem;background:#f1d98c;color:var(--night);border-radius:8px}
+.who h3{font-size:1.35rem;margin-bottom:.3rem;color:var(--night)}
+.who p{margin:0;font-weight:500}
+.sec__head h2{font-size:clamp(2rem,3.6vw,2.8rem);margin-bottom:.6rem}
+.sec__sub{color:var(--mist);margin-bottom:1.5rem}
+.sec__body{max-width:46rem;display:grid;gap:clamp(2.5rem,5vw,3.75rem)}
+
+.facts{margin:1.75rem 0 0;display:grid;gap:0}
+.facts>div{padding:.7rem 0;border-top:1px solid rgba(169,182,211,.2)}
+.facts>div:last-child{border-bottom:1px solid rgba(169,182,211,.2)}
+.facts dt{color:var(--mist);font-size:.95rem;line-height:1.5}
+.facts dd{margin:0;font-weight:600}
+
+.prose{max-width:37rem}
+.prose p:last-child{margin-bottom:0}
+.lede{font-family:var(--display);font-size:clamp(1.35rem,2.4vw,1.65rem);line-height:1.6;color:var(--ivory)}
+
+h3{font-size:1.5rem;margin-bottom:.6rem}
+
+/* পড়ার সহায়িকা ও টেমপ্লেট */
+.material,.template{display:grid;gap:1.25rem;padding:1.6rem 1.75rem;background:var(--deep);border-left:3px solid var(--gold);border-radius:0 8px 8px 0}
+.material p,.template p{color:var(--mist);margin:0;max-width:34rem}
+.material__actions{display:flex;flex-wrap:wrap;gap:.75rem}
+.template .btn{justify-self:start}
+
+/* পুরস্কার */
+.prizelist{list-style:none;margin:0;padding:0;max-width:30rem}
+.prizelist li{display:flex;align-items:baseline;gap:.8rem;padding:.55rem 0}
+.prizelist span{font-size:1.1rem}
+.prizelist i{flex:1;border-bottom:2px dotted rgba(169,182,211,.45);transform:translateY(-.3em)}
+.prizelist b{font-family:var(--display);font-weight:400;font-size:1.7rem;color:var(--gold);min-width:9rem;text-align:right}
+.prizelist li:first-child b{font-size:2.1rem}
+
+/* এআই নোটিশ — আলাদা রঙে */
+.ai{background:var(--gold);color:var(--night);padding:1.6rem 1.9rem;border-radius:8px;position:relative}
+.ai h3{font-size:1.45rem;margin-bottom:.4rem;color:var(--night)}
+.ai p{margin:0;font-weight:500}
+
+/* অ্যাকর্ডিয়ন */
+.acc{border-bottom:1px solid rgba(169,182,211,.25)}
+.acc__item{border-top:1px solid rgba(169,182,211,.25)}
+.acc__item summary{display:grid;grid-template-columns:2.4rem 1fr auto 1.4rem;gap:.9rem;align-items:center;padding:1rem 0;cursor:pointer;list-style:none}
+.acc__item summary::-webkit-details-marker{display:none}
+.acc__item summary::after{content:"";width:.7rem;height:.7rem;border-right:2px solid var(--gold);border-bottom:2px solid var(--gold);transform:rotate(45deg) translate(-2px,-2px);transition:transform .25s;justify-self:center}
+.acc__item[open] summary::after{transform:rotate(-135deg) translate(-2px,-2px)}
+.acc__item summary:hover .acc__t{color:var(--gold)}
+.acc__n{width:2.2rem;height:2.2rem;border:1.5px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-family:var(--display);color:var(--gold);line-height:1}
+.acc__t{font-family:var(--display);font-size:1.3rem;transition:color .2s}
+.acc__d{color:var(--mist);font-size:.95rem}
+.acc__c{padding:0 0 1.2rem 3.3rem;color:var(--mist);max-width:36rem}
+.acc__c p:last-child{margin:0}
+.acc__item[open] .acc__c{animation:reveal .3s ease}
+@keyframes reveal{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.textlink{font-weight:600}
+
+
+/* ফর্ম */
+.formbox{background:var(--deep);border:1px solid rgba(169,182,211,.2);border-radius:10px;padding:1.25rem}
+.formbox__head{padding:.25rem .5rem 1rem}
+.formbox__head h3{margin-bottom:.3rem}
+.formbox__head p{color:var(--mist);margin:0;font-size:1rem}
+.formframe{display:block;width:100%;border:0;border-radius:6px;background:#f0ebf8}
+
+.tabs{display:flex;gap:.25rem;border-bottom:1px solid rgba(169,182,211,.25);margin:-.25rem -.25rem 1.1rem}
+.tabs button{appearance:none;background:none;border:0;border-bottom:3px solid transparent;margin-bottom:-1px;color:var(--mist);font:600 1.1rem/1.4 var(--text);padding:.7rem 1.1rem;cursor:pointer;transition:color .2s}
+.tabs button:hover{color:var(--ivory)}
+.tabs button[aria-selected="true"]{color:var(--gold);border-bottom-color:var(--gold)}
+.tabpanel[hidden]{display:none}
+.submit{padding:.5rem}
+.submit p{color:var(--mist)}
+.submit__list{margin:0 0 1.5rem;padding-left:1.2rem;color:var(--ivory)}
+.submit__note{margin:1rem 0 0;font-size:.95rem}
+
+/* নোটিশ */
+.notices{list-style:none;margin:0;padding:0;display:grid;gap:1.25rem}
+.notice{display:grid;grid-template-columns:8.5rem 1fr;gap:1.5rem;padding:1.4rem 0;border-top:1px solid rgba(169,182,211,.25)}
+.notice:last-child{border-bottom:1px solid rgba(169,182,211,.25)}
+.notice__date{color:var(--mist);font-size:1rem;line-height:1.6}
+.notice h3{font-size:1.4rem;margin-bottom:.35rem}
+.notice p{margin:0 0 .9rem;color:var(--mist);max-width:36rem}
+.notice .btn{padding:.4rem 1.1rem;font-size:1rem}
+.pin{display:inline-block;background:var(--gold);color:var(--night);font:700 .85rem/1.5 var(--text);padding:0 .65rem;border-radius:99px;margin-bottom:.45rem}
+.empty{color:var(--mist);padding:1.5rem 0;border-top:1px solid rgba(169,182,211,.25)}
+
+/* ফুটার */
+.foot{border-top:1px solid rgba(169,182,211,.2);background:#0b0d28;padding-top:clamp(2.5rem,6vw,4rem)}
+.foot__in{display:grid;grid-template-columns:auto 1fr auto;gap:clamp(1.5rem,5vw,4rem);align-items:center}
+.foot__brand{display:flex;align-items:center;gap:1.5rem}
+.foot__verse{margin:0;font-family:var(--display);font-size:clamp(1.3rem,2.4vw,1.7rem);line-height:1.6}
+.foot__verse p{margin:0 0 .4rem}
+.foot__verse footer{font:400 1rem var(--text);color:var(--mist)}
+.foot__contact h2{font-size:1.3rem;margin-bottom:.6rem}
+.foot__contact p{margin:0 0 .3rem}
+.foot__contact span{color:var(--mist);margin-right:.5rem}
+.foot__copy{margin:clamp(2rem,5vw,3rem) 0 0;padding:1.1rem var(--gutter);text-align:center;color:var(--mist);font-size:.95rem;border-top:1px solid rgba(169,182,211,.12)}
+
+/* ── ছোট পর্দা ────────────────────────────────────── */
+@media (max-width:900px){
+  .grid{grid-template-columns:1fr}
+  .sec__head{position:static}
+  .facts{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:1.5rem}
+  .facts>div:nth-last-child(2){border-bottom:1px solid rgba(169,182,211,.2)}
+  .foot__in{grid-template-columns:1fr;text-align:left}
+}
+@media (max-width:720px){
+  .brand span{display:none}
+  .top__in{gap:.5rem}
+  .nav{margin-left:0;flex:1;justify-content:center}
+  .nav a{padding:.3rem .6rem;font-size:.95rem}
+  .entries{grid-template-columns:1fr}
+  .notice{grid-template-columns:1fr;gap:.2rem}
+  .facts{grid-template-columns:1fr}
+  .acc__item summary{grid-template-columns:2.2rem 1fr 1.4rem}
+  .acc__d{grid-column:2;grid-row:2;margin-top:-.4rem}
+  .acc__item summary::after{grid-column:3;grid-row:1}
+  .acc__c{padding-left:0}
+  .tabs button{padding:.6rem .8rem;font-size:1rem}
+}
+@media (max-width:420px){
+  .top__ruet{display:none}
+  body{font-size:1.06rem}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
